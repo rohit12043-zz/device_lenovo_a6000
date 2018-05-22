@@ -371,5 +371,9 @@ service timekeep /system/vendor/bin/timekeep restore
 # Start it again on boot, just being double sure.
 on property:sys.boot_completed=1
     start set_baseband
+<<<<<<< HEAD
     restart cameraserver
 >>>>>>> 370a63f... a6000: switch to sony's timekeep
+=======
+    restart cameraserver
+>>>>>>> b8403b0... a6000: rootdir: Restart cameraserver after boot completed
