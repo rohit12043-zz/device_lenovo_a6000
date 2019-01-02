@@ -34,7 +34,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8916 \
     libgenlock \
     libtinyxml \
-    memtrack.msm8916
+    memtrack.msm8916 \
+    copybit.msm8916
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -377,6 +378,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+
+# Strip debug
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=128m \

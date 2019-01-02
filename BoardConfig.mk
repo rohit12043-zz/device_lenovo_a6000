@@ -66,7 +66,13 @@ ifeq ($(HOST_OS),linux)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
       WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+<<<<<<< HEAD
     endif
+=======
+      DONT_DEXPREOPT_PREBUILTS := true
+      USE_DEX2OAT_DEBUG := false
+      WITH_DEXPREOPT_DEBUG_INFO := false
+>>>>>>> d9ab855... a6000: strip off some debug packages
   endif
 endif
 
@@ -111,7 +117,14 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_USES_ION := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_NEW_ION_API := true
+<<<<<<< HEAD
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
+=======
+USE_OPENGL_RENDERER := true
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000
+>>>>>>> 778fb67... a6000: Ship copybit again
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
 BOARD_USES_HWCOMPOSER := true
