@@ -17,6 +17,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/lenovo/a6000/device.mk)
 
+# Inherit PixysOS specific configuration
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
@@ -25,11 +28,15 @@ TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm89
 
 TARGET_VENDOR := Lenovo
 PRODUCT_DEVICE := a6000
-PRODUCT_NAME := aosp_a6000
+PRODUCT_NAME := pixys_a6000
 BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
 PRODUCT_MANUFACTURER := Lenovo
+
+# PIXYSOS Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="rohitsinha12"
 
 # Device Identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
