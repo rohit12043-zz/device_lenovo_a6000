@@ -20,6 +20,9 @@ $(call inherit-product, device/lenovo/a6000/device.mk)
 # Inherit PixysOS specific configuration
 $(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
@@ -33,6 +36,8 @@ BOARD_VENDOR := Lenovo
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := A6000
 PRODUCT_MANUFACTURER := Lenovo
+
+export PIXYS_BUILD_TYPE=OFFICIAL
 
 # PIXYSOS Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
